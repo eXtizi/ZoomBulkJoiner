@@ -37,7 +37,7 @@ It can be installed using https://www.google.com/chrome/
 
 ## TO-DO
 - Stoping Incoming Video Audio Feed
-- Going Headless is impossible. Gotta Find a Workaround(Maybe a virtual Browser)
+- Going Headless is Triggers Cloudflare . Gotta Find a Workaround(Maybe a virtual Browser)
 - Cookies Accepting Function
   
 ### Credits:
