@@ -16,8 +16,6 @@ from time import sleep
 # ? Questionary --> For beautiful command line prompts
 from questionary import Style, select, text
 
-# ? PyAutoGUI --> For preventing zoom popup
-from pyautogui import keyDown, click, locateCenterOnScreen
 
 # ? OS --> For clearing the screen
 from os import system, name as OSNAME
