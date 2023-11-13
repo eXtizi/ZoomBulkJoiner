@@ -82,23 +82,23 @@ def idPass(id=None, password=None):
             f"https://zoom.us/wc/{id}/join?from=join&_x_zm_rtaid=ws81SA1uSGuB2O6_Sekbbg.1690523013218.d0e8a870b0195ee064d41de484bdd657&_x_zm_rhtaid=508"
         )
         sleep(0.5)
-
+        driver.switch_to.frame(driver.find_element(By.TAG_NAME,"iframe"))
         # ? Entering password
         pwd = driver.find_element(By.ID, "input-for-pwd")
         pwd.clear()
         pwd.send_keys(password)
-
+        
         # ? Entering name
         user = driver.find_element(By.ID, "input-for-name")
         user.clear()
         user.send_keys(name)
 
         # ? Joining audio and muting mic
-        #audioButton = driver.find_element(By.ID, "preview-audio-control-button")
-        #audioButton.click()            if driver.find_element(By.LINK_TEXT, "Share Screen"):
-        #sleep(0.1)
-        #audioButton2 = driver.find_element(By.ID, "preview-audio-control-button")
-        #audioButton2.click()
+        audioButton = driver.find_element(By.ID, "preview-audio-control-button")
+        audioButton.click()            if driver.find_element(By.LINK_TEXT, "Share Screen"):
+        sleep(0.1)
+        audioButton2 = driver.find_element(By.ID, "preview-audio-control-button")
+        audioButton2.click()
         user.send_keys(Keys.RETURN)
 
 
@@ -138,16 +138,11 @@ def link(link="https://learn.zoom.us/j/94950913565?pwd=LzhoOVdybFBKVWVwOU9za3Ywd
 
 
    
-        # ? Entering name"href");.removeAttribute('value')
+
         sleep(5)
-        #input()
-        #hey=driver.execute_script(f"document.getElementsByTagName('input');")
-        #print(hey)
+
         driver.switch_to.frame(driver.find_element(By.TAG_NAME,"iframe"))
-        #driver.execute_script(f"document.getElementsByTagName('input')[1].setAttribute('value', 'name');")
-        #driver.execute_script(f"document.getElementsByTagName('button')[4].setAttribute('class', 'zm-btn preview-join-button zm-btn--default zm-btn__outline--blue');")
-        #driver.execute_script(f"document.getElementsByTagName('button')[4].setAttribute('tabindex', '0');")
-        #driver.execute_script(f"document.getElementsByTagName('button')[4].click();")
+
         print(name)
         WebDriverWait(driver, 1000).until(EC.presence_of_element_located((By.CLASS_NAME, "preview-meeting-info-field-input")) )
         user = driver.find_element(By.CLASS_NAME, "preview-meeting-info-field-input")
@@ -155,11 +150,11 @@ def link(link="https://learn.zoom.us/j/94950913565?pwd=LzhoOVdybFBKVWVwOU9za3Ywd
         user.send_keys(name)
 
         # ? Joining audio and muting mic
-        #audioButton = driver.find_element(By.ID, "preview-audio-control-button")
-        #audioButton.click()
-        #sleep(0.1)
-        #audioButton2 = driver.find_element(By.ID, "preview-audio-control-button")
-        #audioButton2.click()
+        audioButton = driver.find_element(By.ID, "preview-audio-control-button")
+        audioButton.click()
+        sleep(0.1)
+        audioButton2 = driver.find_element(By.ID, "preview-audio-control-button")
+        audioButton2.click()
         user.send_keys(Keys.RETURN)
 
 
@@ -179,7 +174,7 @@ def StatBar(time: float, desc: str):
 ############## ! Printing Options ##############
 if __name__ == "__main__":
     setSelenium()
-    """system("clear" if OSNAME == 'posix' else "cls")
+    system("clear" if OSNAME == 'posix' else "cls")
     Align.center(
         StatBar(2, desc="[cyan]Loading Zoom Bomber"), vertical="middle"
     )
@@ -207,5 +202,4 @@ if __name__ == "__main__":
     elif userSelect == "Link":
         link()
     else:
-        print("Unknown error, please restart the program")"""
-    link()
+        print("Unknown error, please restart the program")
