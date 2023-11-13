@@ -95,7 +95,7 @@ def idPass(id=None, password=None):
 
         # ? Joining audio and muting mic
         audioButton = driver.find_element(By.ID, "preview-audio-control-button")
-        audioButton.click()            if driver.find_element(By.LINK_TEXT, "Share Screen"):
+        audioButton.click()
         sleep(0.1)
         audioButton2 = driver.find_element(By.ID, "preview-audio-control-button")
         audioButton2.click()
