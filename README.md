@@ -46,3 +46,7 @@ It can be installed using https://www.google.com/chrome/
   
 ### Credits:
 https://github.com/AverageBlank/ZoomBomber
+
+```
+Note : Program may contain Bugs, and only tested the joining from link option. please proceed with care and modify the code to suite your need.
+```
