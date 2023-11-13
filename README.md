@@ -1,7 +1,8 @@
 # ZoomBulkJoiner 
 Multi-Participant Zoom Meeting Script
 
-![image](https://github.com/eXtizi/ZoomBulkJoiner/assets/75202685/b32bde98-293d-4813-a865-9b51a0b77153)
+![image](https://github.com/eXtizi/ZoomBulkJoiner/assets/75202685/0cb71466-9581-4aaf-8d10-6b362521f963)
+
 
 
 
